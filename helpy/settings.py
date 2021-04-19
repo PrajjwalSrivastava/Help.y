@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'organizations.apps.OrganizationsConfig',
+    'ngos.apps.NgosConfig',
     'accounts.apps.AccountsConfig',
     'django.contrib.admin',
     'django.contrib.auth',

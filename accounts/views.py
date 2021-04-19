@@ -12,7 +12,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request,user)
-            return render(request,'organizations/home.html')
+            return render(request,'ngos/home.html')
     else:
         form = UserCreationForm()
     return render(request,'registration/signup.html',{'form':form})
