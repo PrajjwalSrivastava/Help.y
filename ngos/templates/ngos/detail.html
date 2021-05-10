@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container mt-5">
+<div class="row">
+    <div class="col-7">
+        <img src="{{media_url}}{{ ngo.image }}" alt="" height="480" width="720" style="border:0.5px solid #000000">
+    </div>
+    <div class="col-5">
+        <div class="row" style="border:0.5px solid #000000">
+            <h1 class="pb-5 pt-1">{{ngo.title}}</h1>
+            <hr/>
+            <div class="col-6 py-3">
+            <h4>Registration Number:</h4>
+            </div>
+            <div class="col-6 py-3">
+                <p style="font-size:x-large;">{{ngo.registration_number}}</p>
+            </div>
+            <hr/>
+            <div class="col-6 py-3">
+                <h4>Contact Number:</h4>
+                </div>
+                <div class="col-6 py-3">
+                    <p style="font-size:x-large;">{{ngo.contact}}</p>
+            </div>
+            <hr/>
+            <div class="col-6 py-3">
+                <h4>Email:</h4>
+                </div>
+                <div class="col-6 py-3">
+                    <a href="mailto:{{ngo.email}}" style="font-size:x-large;">{{ngo.email}}</a>
+            </div>
+            <hr/>
+            <a class="py-3 mt-2" href="{{ngo.url}}" style="font-size:large;">Visit website</a>
+        </div>
+    </div>
+    <div class="col-7 py-5">
+        <h2>About:</h2>
+        {{ngo.description}}
+    </div>
+</div>
+</div>
+{% endblock content %}
+
