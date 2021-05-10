@@ -11,5 +11,6 @@ urlpatterns = [
     path('homeless',views.homeless,name='homeless'),
     path('hunger',views.hunger,name='hunger'),
     path('differently_abled',views.differently_abled,name='differently_abled'),
+    path('search',views.search,name='search'),
     path('<registration_number>',views.detail,name='detail'),
 ]

@@ -57,6 +57,7 @@ def create(request):
             ngo.email = choices['email']
             ngo.registration_number = choices['registration_number']
             ngo.contact = choices['contact']
+            ngo.address = choices['address']
             ngo.url = choices['url']
             ngo.image = choices['image']
             ngo.thumbnail = choices['thumbnail']
@@ -79,3 +80,13 @@ def create(request):
 def detail(request, registration_number):
     ngo = get_object_or_404(Ngos, pk=registration_number)
     return render(request, 'ngos/detail.html',{'ngo':ngo,'media_url':settings.MEDIA_URL})
+
+
+def search(request):
+    if request.method == 'POST':
+        searched = request.POST['searched']
+        ngos = Ngos.objects.filter(address__icontains=searched)
+        return render(request,'ngos/search.html',{'searched':searched,'ngos':ngos,'media_url':settings.MEDIA_URL} )
+
+    else:
+        return render(request,'ngos/search.html',{} )

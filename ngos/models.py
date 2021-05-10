@@ -12,6 +12,7 @@ class Ngos(models.Model):
     email = models.EmailField()
     registration_number = models.CharField(max_length=10, primary_key=True)
     contact = PhoneField()
+    address = models.CharField(max_length=255)
     url = models.URLField()
     thumbnail = models.FileField(upload_to='images/')
     image = models.FileField(upload_to='images/')

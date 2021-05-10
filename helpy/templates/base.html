@@ -58,7 +58,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <div class="d-sm-flex ms-auto">
-        <form class="d-flex" method="POST" action="{% url '' %}">
+        <form class="d-flex" method="POST" action="{% url 'search' %}">
+          {% csrf_token %}
           <input class="form-control me-2" type="search" placeholder="Search by location" aria-label="Search" name="searched">
           <button class="btn btn-secondary" type="submit">Search</button>
         </form>
