@@ -36,6 +36,70 @@
 
 
     <style>
+      a:link {
+  color: rgb(220, 56, 72, 0.612);
+}
+
+
+      .reasons-col {
+  position: relative;
+  overflow: hidden;
+}
+.reasons-col img {
+  width: 100%;
+  -moz-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  -webkit-transition: all, 0.5s;
+  transition: all, 0.5s;
+}
+.reasons-col .reasons-titles {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background: rgba(220, 56, 72, 0.612);
+  width: 100%;
+  color: #fff;
+  text-transform: uppercase;
+  height: 125px;
+  padding: 25px 0;
+}
+.reasons-col .reasons-title {
+  font-weight: bold;
+}
+.reasons-col .on-hover {
+  position: absolute;
+  top: 0;
+  bottom: 125px;
+  width: 100%;
+  padding: 25px;
+  color: #fff;
+  text-align: justify;
+  background: rgba(220, 56, 72, 0.612);
+  border-bottom: 1px solid #fff;
+  visibility: hidden;
+  opacity: 0;
+  -moz-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  -webkit-transition: all, 0.5s;
+  transition: all, 0.5s;
+}
+.reasons-col:hover .on-hover {
+  visibility: visible;
+  opacity: 1;
+  padding: 50px;
+  -moz-transition: all, 1s;
+  -o-transition: all, 1s;
+  -webkit-transition: all, 1s;
+  transition: all, 1s;
+}
+.reasons-col:hover img {
+  -moz-transform: perspective(1.1) scale3d(1.1, 1.1, 1.1);
+  -webkit-transform: perspective(1.1) scale3d(1.1, 1.1, 1.1);
+  transform: perspective(1.1) scale3d(1.1, 1.1, 1.1);
+}
+
+
+
       .loginClass {
         background:url('https://dh3vbjnk0bnfa.cloudfront.net/static/centralauth/images/btn-login-hover.png') no-repeat 5px 5px #484B4F;;
         width: 100px;
@@ -105,7 +169,7 @@
 }
 
 .nav-pills .nav-link.active {
-    background-color: #dc35469c !important;
+    background-color: rgba(220, 56, 72, 0.612) !important;
     border-radius: 30px;
 }
 
@@ -127,6 +191,82 @@
           font-size: 3.5rem;
         }
       }
+
+      @keyframes bounceInDown {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+}
+.animated {
+  visibility: visible;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated.slow {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+@keyframes bounceInUp {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+}
     </style>
 
     
@@ -136,7 +276,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger ">
   <div class="container-fluid ps-5">
-    <a class="navbar-brand" href="{% url 'home' %}" style="font-size: xx-large;font-weight:600;"><b>Help.y</b></a>
+    <a class="navbar-brand bounceInUp animated slow" href="{% url 'home' %}" style="font-size: xx-large;font-weight:600;"><b>Help.y</b></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
