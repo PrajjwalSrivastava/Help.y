@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
     
 
 class Ngos(models.Model):
-    title = models.CharField(max_length=255,help_text='Add title of your NGO')
+    title = models.CharField(max_length=255)
     #pub_date = models.DateTimeField()
     description = models.TextField()
     email = models.EmailField()
