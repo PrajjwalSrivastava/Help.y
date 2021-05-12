@@ -22,11 +22,11 @@ def children(request):
 
 def women(request):
     ngos = Ngos.objects.all().filter(women=True)
-    return render(request,'ngos/women.html', {'ngos':ngos})
+    return render(request,'ngos/women.html', {'ngos':ngos, 'media_url':settings.MEDIA_URL})
 
 def elderly(request):
     ngos = Ngos.objects.all().filter(elderly=True)
-    return render(request,'ngos/elderly.html', {'ngos':ngos})
+    return render(request,'ngos/elderly.html', {'ngos':ngos, 'media_url':settings.MEDIA_URL})
 
 def cancer(request):
     ngos = Ngos.objects.all().filter(cancer=True)
@@ -34,15 +34,15 @@ def cancer(request):
 
 def homeless(request):
     ngos = Ngos.objects.all().filter(homeless=True)
-    return render(request,'ngos/homeless.html', {'ngos':ngos})
+    return render(request,'ngos/homeless.html', {'ngos':ngos, 'media_url':settings.MEDIA_URL})
 
 def hunger(request):
     ngos = Ngos.objects.all().filter(hunger=True)
-    return render(request,'ngos/hunger.html', {'ngos':ngos})
+    return render(request,'ngos/hunger.html', {'ngos':ngos, 'media_url':settings.MEDIA_URL})
 
 def differently_abled(request):
     ngos = Ngos.objects.all().filter(differently_abled=True)
-    return render(request,'ngos/differently_abled.html', {'ngos':ngos})
+    return render(request,'ngos/differently_abled.html', {'ngos':ngos, 'media_url':settings.MEDIA_URL})
 
 
 @login_required
