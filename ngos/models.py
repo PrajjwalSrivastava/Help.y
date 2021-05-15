@@ -27,3 +27,7 @@ class Ngos(models.Model):
 
     def __str__(self):
         return self.title
+
+    def about(self):
+        return self.description[:80]+"\n..."
+        

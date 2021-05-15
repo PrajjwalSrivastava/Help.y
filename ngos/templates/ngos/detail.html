@@ -18,9 +18,10 @@
                         <img src="{{media_url}}{{ ngo.image }}" alt="" height="480" width="720" style="border:0.5px solid #000000">
 
                         <div class="reasons-titles">
-                            <h3>Title: {{ngo.title}}</h3>
+                            <h2>{{ngo.title}}</h2>
                         </div>
                         <div class="on-hover hidden-xs">
+                            <h1 style="font-weight:bold">About {{ngo.title}}:</h1>
                             <p>{{ngo.description}}</p>                           
                         </div>
                     </div>
@@ -30,7 +31,7 @@
             </div>
             <br>
 
-            <div class="row table-responsive">
+            <div class="row table-responsive pl-3">
                 <table class="table table-striped table-bordered">
                     <thead>
                       <tr>
@@ -48,6 +49,13 @@
                       </thead>
                       <thead>
                         <tr>
+                          <th scope="col">Address</th>
+                          
+                          <th scope="col">{{ngo.address}}</th>
+                        </tr>
+                      </thead>
+                      <thead>
+                        <tr>
                           <th scope="col">Email</th>
                           
                           <th scope="col" style="color:rgb(220, 56, 72, 0.612)"><a href="mailto:{{ngo.email}}">{{ngo.email}}</a></th>
@@ -57,7 +65,7 @@
                   
                   
             </div>
-            <div class="row">
+            <div class="row px-3">
                 <a class="btn btn-danger" href="{{ngo.url}}" role="button" target="_blank">Visit Website</a>
 
             </div>

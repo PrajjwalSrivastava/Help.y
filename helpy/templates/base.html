@@ -56,20 +56,36 @@
   position: absolute;
   bottom: 0;
   text-align: center;
-  background: rgba(220, 56, 72, 0.612);
+  background: rgba(220, 56, 73, 0.5);
   width: 100%;
   color: #fff;
   text-transform: uppercase;
-  height: 125px;
+  height: 75px;
+  padding: 15px 0;
+}
+
+.reasons-col:hover .reasons-titles {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background: rgba(220, 56, 73, 0.5);
+  width: 100%;
+  color: #fff;
+  text-transform: uppercase;
+  height: 75px;
   padding: 25px 0;
 }
+
 .reasons-col .reasons-title {
   font-weight: bold;
 }
 .reasons-col .on-hover {
   position: absolute;
+  overflow: scroll;
   top: 0;
   bottom: 125px;
+  height: 100%;
   width: 100%;
   padding: 25px;
   color: #fff;
@@ -96,6 +112,7 @@
   -moz-transform: perspective(1.1) scale3d(1.1, 1.1, 1.1);
   -webkit-transform: perspective(1.1) scale3d(1.1, 1.1, 1.1);
   transform: perspective(1.1) scale3d(1.1, 1.1, 1.1);
+  filter: grayscale(100%) blur(5px);
 }
 
 
@@ -344,7 +361,7 @@
 <footer class="text-muted py-5">
   <div class="container">
     <p class="float-end mb-1" >
-      <a href="#"><i class="fa fa-chevron-circle-up" style="font-size:48px;color:red"></i></a>
+      <a href="#"><i class="fa fa-chevron-circle-up" style="font-size:48px;color:red;"></i></a>
     </p>
   </div>
 </footer>
