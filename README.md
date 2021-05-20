@@ -26,9 +26,16 @@
 
 
 ## Screenshots
+Homepage:
 ![Example screenshot](./img/ss1.png)
+
+Login page:
 ![Example screenshot](./img/ss2.png)
+
+NGO details:
 ![Example screenshot](./img/ss3.png)
+
+Search page:
 ![Example screenshot](./img/ss4.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
